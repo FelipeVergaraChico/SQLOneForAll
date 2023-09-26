@@ -95,7 +95,8 @@ CREATE TABLE SpotifyClone.historico(
     pessoa_usuaria_id INT NOT NULL,
     cancoes_id INT NOT NULL,
     FOREIGN KEY (pessoa_usuaria_id) REFERENCES SpotifyClone.usuario(pessoa_usuaria_id),
-    FOREIGN KEY (cancoes_id) REFERENCES SpotifyClone.cancoes(cancoes_id)
+    FOREIGN KEY (cancoes_id) REFERENCES SpotifyClone.cancoes(cancoes_id),
+    UNIQUE KEY historico_id (data_reproducao, pessoa_usuaria_id, cancao_id)
 );
 
 INSERT INTO SpotifyClone.historico (pessoa_usuaria_id, cancoes_id, data_reproducao)
@@ -120,6 +121,7 @@ VALUES
   CREATE TABLE SpotifyClone.seguindo_artistas(
     pessoa_usuaria_id INT NOT NULL,
     artista_id INT NOT NULL,
+    PRIMARY KEY (pessoa_usuaria_id, artista_id),
     FOREIGN KEY (pessoa_usuaria_id) REFERENCES SpotifyClone.usuario(pessoa_usuaria_id),
     FOREIGN KEY (artista_id) REFERENCES SpotifyClone.artista(artista_id)
 );
