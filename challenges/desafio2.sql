@@ -1,4 +1,4 @@
 SELECT 
-(SELECT COUNT(*) FROM cancoes) AS cancoes,
-(SELECT COUNT(*) FROM artista) AS artistas,
-(SELECT COUNT(*) FROM album) AS albuns;
+(SELECT COUNT(*) FROM SpotifyClone.cancoes) AS cancoes,
+(SELECT COUNT(*) FROM SpotifyClone.artista) AS artistas,
+(SELECT COUNT(*) FROM SpotifyClone.album) AS albuns;
