@@ -1,12 +1,13 @@
--- Descomente e altere as linhas abaixo:
-
 DROP DATABASE IF EXISTS SpotifyClone;
+
 CREATE DATABASE IF NOT EXISTS SpotifyClone;
+
 CREATE TABLE SpotifyClone.plano(
     plano_id INT PRIMARY KEY AUTO_INCREMENT,
     assinatura VARCHAR(200) NOT NULL,
     valor_plano DECIMAL(10, 2) NOT NULL,
 );
+
 INSERT INTO SpotifyClone.plano (plano_id, assinatura, valor_plano)
 VALUES
   (1, 'gratuito', 0),
@@ -137,6 +138,5 @@ VALUES
   (6, 6),
   (6, 1),
   (7, 6),
-  (8, ""),
   (9, 3),
   (10, 2);
